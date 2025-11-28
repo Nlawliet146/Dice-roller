@@ -12,11 +12,14 @@ function rollDice(){
         const value = Math.floor(Math.random() * 6) + 1;
         values.push(value);
         images.push(`<img src="${value}.png">`);  
-        total += i;
+        total += value;
     }
 
     diceresult.textContent = `DICE RESULT: ${values.join('/')}` ;
     diceimages.innerHTML = images.join('');
     dicetotal.textContent = `DICE TOTAL: ${total}`;
+    
+    total = 0;
 }
+
 
